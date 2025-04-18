@@ -1,0 +1,128 @@
+
+:root {
+  --whatsapp-green: #075e54;
+  --whatsapp-light-green: #dcf8c6;
+  --chat-bg: #ece5dd;
+  --font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.typebot-container {
+  background-color: var(--chat-bg) !important;
+  font-family: var(--font-family) !important;
+}
+
+.whatsapp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  background-color: var(--whatsapp-green);
+  color: #fff;
+  padding: 0 12px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.whatsapp-header .left {
+  display: flex;
+  align-items: center;
+}
+.whatsapp-header .left .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 12px;
+  object-fit: cover;
+}
+.whatsapp-header .left .info .name {
+  font-size: 16px;
+  font-weight: 600;
+}
+.whatsapp-header .left .info .status {
+  font-size: 12px;
+  opacity: .8;
+}
+.whatsapp-header .actions i {
+  font-size: 22px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.typebot-chat-view {
+  padding-top: 70px !important;
+}
+
+.typebot-host-bubble {
+  background: #fff !important;
+  color: #000;
+  border-radius: 0 7.5px 7.5px 7.5px;
+  padding: 8px 12px;
+  max-width: 75%;
+  margin: 8px;
+}
+.typebot-host-bubble::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -6px;
+  border: 6px solid transparent;
+  border-right-color: #fff;
+}
+.typebot-guest-bubble {
+  background: var(--whatsapp-light-green) !important;
+  color: #000;
+  border-radius: 7.5px 0 7.5px 7.5px;
+  padding: 8px 12px;
+  max-width: 75%;
+  margin: 8px auto 8px 8px;
+}
+.typebot-guest-bubble::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: -6px;
+  border: 6px solid transparent;
+  border-left-color: var(--whatsapp-light-green);
+}
+
+.typebot-input-container {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.typebot-input-form {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 24px);
+  max-width: 800px;
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+}
+.typebot-input-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 8px;
+}
+.typebot-input-form button {
+  background-color: var(--whatsapp-green);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.typebot-input-form button i {
+  color: #fff;
+  font-size: 20px;
+}
